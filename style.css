@@ -1,0 +1,208 @@
+:root{
+    --primaryColor: #9a0021;
+    --secondaryColor:#ffae01;
+    --fontColor:#2b2e35;
+    --blackColor:#040507;
+    --whiteColor:#fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: var(--fontColor);
+    font-family: 'DM sans', sans-serif;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 2%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+}
+.menutoggle{
+    display: none;
+}
+.bar{
+    /*display: block;*/
+    width: 15px;
+    height: 2px;
+    margin:3px auto;
+    transition: all 0.3 ease-in-out;
+    background-color: var(--whiteColor);
+    cursor: pointer;
+}
+.logo{
+font-size: 26px;
+text-decoration: none;
+color: var(--secondaryColor);
+font-weight: bold;
+letter-spacing: 1;
+}
+.menus a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: var(--whiteColor);
+
+}
+.menus a:hover{
+    color: var(--primaryColor);
+}
+.signup{
+    text-decoration: none;
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+.signup:hover{
+    background-color: transparent;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    padding: 5%;
+    background-image: url("IMAGES/header2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: orange;
+    position: relative;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to topo, rgba(0,0,0,0.8)0,rgba(0,0,0,0) 60%, rgba(0,0,0,0.8)100%);
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+.headerdesc{
+    position: absolute;
+    min-width: 300px;
+    width: 40%;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 3;
+    color: var(--whiteColor);
+}
+.title{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1;
+    margin-bottom: 0.5rem;
+    color: var(--whiteColor);
+}
+.title span{
+    color: var(--primaryColor);
+}
+.headerdesc p {
+    letter-spacing: 1.5;
+}
+.headerbutton{
+    padding: 10px 25px;
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    border: none;
+    letter-spacing: 2;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.headerbutton:hover{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    letter-spacing: 3;
+}
+.program{
+    padding: 2%;
+    text-align: right;
+}
+.programwrapper{
+    width: 100%;
+    display: flex;
+    padding: 0 5%;
+    margin: 2% 0;
+    gap: 2 rem;
+    overflow-x: auto;
+}
+.programcard{
+    position: relative;
+    height: 450px;
+    width: 30%;
+    min-width: 200px;
+    background-color: var(--blackColor);
+}
+.programimg{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+}
+.programtitle{
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    color: var(--whiteColor);
+    padding: 10px 20px;
+    letter-spacing: 1;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+/*hide this detail will show when hovered*/
+.programdetail{
+    display: none;
+}
+.programcard:hover .programimg{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.programcard:hover .programdetail{
+    position: absolute;
+    display: block;
+    background-color: #040507bf;
+    color: var(--whiteColor);
+    width: 100%;
+    height: 40%;
+    padding: 5%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1;
+    line-height: 1.8;
+}
+.programbutton{
+    margin-top: 10px;
+    padding: 5px 20px;
+    border: none;
+    background-color: var(--whiteColor);
+    color: var(--fontColor);
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.programbutton:hover{
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    letter-spacing: 1;
+}
